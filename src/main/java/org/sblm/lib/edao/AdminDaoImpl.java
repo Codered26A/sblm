@@ -32,7 +32,7 @@ public class AdminDaoImpl implements AdminDao{
     }
 
     @Override
-    @Transactional
+    @javax.transaction.Transactional
     public boolean updateBook(Book oldBook) {
         org.sblm.lib.entity.Book book = modelMapper.map(oldBook, org.sblm.lib.entity.Book.class);
         org.sblm.lib.entity.Book merge = entityManager.merge(book);
