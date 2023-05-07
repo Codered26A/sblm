@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EntityScan(basePackages = "org.sblm.entity")
 public class BabuLalLibraryApplication {
 
 	public static void main(String[] args) {

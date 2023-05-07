@@ -12,7 +12,7 @@ import javax.persistence.EntityManager;
 public class AdminDaoImpl implements AdminDao{
 
     @Autowired
-    private StudentRepository studentRepository;
+    private BookRepository bookRepository;
 
     @Autowired
     private EntityManager entityManager;
@@ -23,8 +23,8 @@ public class AdminDaoImpl implements AdminDao{
     @Override
     @Transactional
     public boolean addNewBook(Book newBook) {
-        org.sblm.entity.Book book = modelMapper.map(newBook, org.sblm.entity.Book.class);
-        org.sblm.entity.Book save = studentRepository.save(book);
+        org.sblm.lib.entity.Book book = modelMapper.map(newBook, org.sblm.lib.entity.Book.class);
+        org.sblm.lib.entity.Book save = bookRepository.save(book);
         if(null != save) {
             return true;
         }
@@ -34,8 +34,8 @@ public class AdminDaoImpl implements AdminDao{
     @Override
     @Transactional
     public boolean updateBook(Book oldBook) {
-        org.sblm.entity.Book book = modelMapper.map(oldBook, org.sblm.entity.Book.class);
-        org.sblm.entity.Book merge = entityManager.merge(book);
+        org.sblm.lib.entity.Book book = modelMapper.map(oldBook, org.sblm.lib.entity.Book.class);
+        org.sblm.lib.entity.Book merge = entityManager.merge(book);
         if(null != merge) {
             return true;
         }

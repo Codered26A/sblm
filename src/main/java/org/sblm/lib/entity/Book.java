@@ -1,4 +1,4 @@
-package org.sblm.entity;
+package org.sblm.lib.entity;
 
 import javax.persistence.*;
 import java.sql.Date;
