@@ -1,0 +1,1 @@
+INSERT INTO book (book_id, name, price, publishing_date, status, status_update_date) VALUES (102, 'Java', 550, '2022-12-31', 'available', '2022-12-31');
